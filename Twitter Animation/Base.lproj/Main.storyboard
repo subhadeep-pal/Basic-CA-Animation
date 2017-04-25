@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Twitter_Animation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEX-nk-01E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter_6_1" translatesAutoresizingMaskIntoConstraints="NO" id="J3x-kF-cyh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSz-Oe-sss">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="BSz-Oe-sss" firstAttribute="leading" secondItem="XEX-nk-01E" secondAttribute="leading" id="Et2-zd-lZF"/>
+                                    <constraint firstAttribute="trailing" secondItem="BSz-Oe-sss" secondAttribute="trailing" id="JUM-2g-WK1"/>
+                                    <constraint firstAttribute="bottom" secondItem="BSz-Oe-sss" secondAttribute="bottom" id="ULH-yi-onF"/>
+                                    <constraint firstItem="J3x-kF-cyh" firstAttribute="leading" secondItem="XEX-nk-01E" secondAttribute="leading" id="b81-ZA-wwB"/>
+                                    <constraint firstItem="J3x-kF-cyh" firstAttribute="top" secondItem="XEX-nk-01E" secondAttribute="top" id="gY4-yg-iKO"/>
+                                    <constraint firstItem="BSz-Oe-sss" firstAttribute="top" secondItem="XEX-nk-01E" secondAttribute="top" id="mIW-54-OFl"/>
+                                    <constraint firstAttribute="trailing" secondItem="J3x-kF-cyh" secondAttribute="trailing" id="n6S-VL-UQa"/>
+                                    <constraint firstAttribute="bottom" secondItem="J3x-kF-cyh" secondAttribute="bottom" id="xIK-fF-X2F"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XEX-nk-01E" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="87s-6h-DSj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XEX-nk-01E" secondAttribute="bottom" id="KxH-ab-0Qp"/>
+                            <constraint firstItem="XEX-nk-01E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WL8-aN-ChO"/>
+                            <constraint firstAttribute="trailing" secondItem="XEX-nk-01E" secondAttribute="trailing" id="jxU-uu-d3D"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="J3x-kF-cyh" id="lFZ-hh-ofv"/>
+                        <outlet property="mainView" destination="XEX-nk-01E" id="KFU-Dd-vE6"/>
+                        <outlet property="overlay" destination="BSz-Oe-sss" id="aVz-S4-SSR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="twitter_6_1" width="320" height="568"/>
+    </resources>
 </document>
